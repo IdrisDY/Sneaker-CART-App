@@ -1,0 +1,124 @@
+$Orange : hsl(26, 100%, 55%);
+$paleOrange:hsl(25, 100%, 94%);
+$Grayishblue: hsl(220, 14%, 75%);
+$Lightgrayishblue: hsl(223, 64%, 98%);
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   font-size: 16px;
+}
+img,button{
+   cursor: pointer;
+}
+.navSection{
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+padding: 1.5em 1em;
+border-bottom: 1px solid black;
+gap: 3em;
+width: 70%;
+}
+.ulNav{
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
+   margin: 0;
+   padding: 0;
+   align-self: flex-start; 
+}
+.avatarDiv{
+   display: flex;
+   justify-content: flex-end;
+   gap: 3em;
+}
+.avatarDiv img{
+   width: 40px;
+}
+.container{
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 3em;
+}
+main{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+width: 70%;
+gap: 3em;
+.shoeGrid{
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+}
+   .shoeImg{
+      width: 90%;
+      border-radius: 1em;
+      height: 60vh;
+   }
+   .thumbnailDiv{
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+   }
+   .thumbnailImg{
+      width: 18%;
+      border-radius: 1em;
+   }
+   .thumbnailImgFocus{
+      width: 18%;
+      border-radius: 1em;
+      border: 2px solid $Orange ;
+filter: opacity(.5);   }
+}
+.cartContainer{
+   display: flex;
+   flex-direction: column;
+gap: 1.5em;
+.sneakertext{
+   color: $Orange;
+}
+h1{
+   font-size: 2.5rem;
+}
+.priceSlash{
+   display: flex;
+gap: 2em;
+span{
+   color: $Orange;
+   background-color: $paleOrange;
+   padding: .5em;
+   border-radius: .5em;
+   font-weight: 700;
+}
+}
+}
+.addToCart{
+   display: flex;
+   gap: 2em;
+}
+.cartCounter{
+display: grid;  
+grid-template-columns: repeat(3,1fr);
+gap: 1.5em;
+width: 35%;
+background: $Lightgrayishblue;
+align-items: center;
+padding: 0 .5em 0 1em;
+border-radius: .5em;
+}
+.cartBtn{
+   display: flex;
+   justify-content: center;
+   gap: 1em;
+   width: 50%;
+   background: $Orange;
+   border: none;
+   border-radius: .5em;
+   padding: 1em 0;
+   color: white;
+   font-size: 1rem;
+   .carticonWhite{
+      filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(336deg) brightness(109%) contrast(502%)   } 
+} 
