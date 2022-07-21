@@ -8,33 +8,32 @@ import thumbShoe2 from './images/image-product-2-thumbnail.jpg'
 import thumbShoe3 from './images/image-product-3-thumbnail.jpg'
 import thumbShoe4 from './images/image-product-4-thumbnail.jpg'
 import AddCart from './AddCart'
-
-
+import LightBoxGallery from './LightBoxGallery'
 
 const ShoeGrid = () => {
    const [shoeClick, setShoeClick] = useState(1)
+   const [bigImgClick, setBigImgClick] = useState(false)
   return (
     <main>
       <div className='shoeGrid' >
 <div>
 { 
    shoeClick === 1 && (
-      <img src={shoe1} alt= 'first  view of shoe' className='shoeImg'/>
+      <img src={shoe1} alt= 'first  view of shoe' className='shoeImg'  onClick={()=>setBigImgClick(true)}/>
    )
 }
 { 
    shoeClick === 2 && (
-      <img src={shoe2} alt= 'first  view of shoe'  className='shoeImg'/>
-   )
-}
+      <img src={shoe2} alt= 'first  view of shoe'  className='shoeImg' onClick={()=>setBigImgClick(true)} />
+      )}
 { 
    shoeClick === 3 && (
-      <img src={shoe3} alt= 'first  view of shoe'  className='shoeImg'/>
+      <img src={shoe3} alt= 'first  view of shoe'  className='shoeImg'  onClick={()=>setBigImgClick(true)}/>
    )
 }
 { 
    shoeClick === 4 && (
-      <img src={shoe4} alt= 'first  view of shoe'  className='shoeImg'/>
+      <img src={shoe4} alt= 'first  view of shoe'  className='shoeImg' onClick={()=>setBigImgClick(true)}/>
    )
 }
  
@@ -46,7 +45,10 @@ const ShoeGrid = () => {
    <img src={thumbShoe4} alt='' className={shoeClick===4?'thumbnailImgFocus':'thumbnailImg'} onClick={()=>setShoeClick(4)}/>
 </div>
       </div>
-      <div><AddCart/></div>
+      <div><AddCart/>
+      
+      </div>
+     {bigImgClick?<LightBoxGallery closeGallery={()=>setBigImgClick(false)}/>:null} 
     </main>
   )
 }
