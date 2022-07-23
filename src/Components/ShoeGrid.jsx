@@ -9,13 +9,34 @@ import thumbShoe3 from './images/image-product-3-thumbnail.jpg'
 import thumbShoe4 from './images/image-product-4-thumbnail.jpg'
 import AddCart from './AddCart'
 import LightBoxGallery from './LightBoxGallery'
+import ImageSlider from './imageswipe/imageSlider'
+import images from './imageswipe/images'
+import { useEffect } from "react"
 
 const ShoeGrid = () => {
    const [shoeClick, setShoeClick] = useState(1)
    const [bigImgClick, setBigImgClick] = useState(false)
-  return (
+  
+
+  
+      const[width,setWidth]= useState(window.innerWidth)
+      const checkWidth=()=>{
+         setWidth(window.innerWidth)
+      }
+      useEffect(()=>{
+         console.log("i dey see u ,y bro")
+         window.addEventListener("resize",checkWidth)
+      },[])
+   
+  console.log(width)
+
+  
+   return (
+   <>
     <main>
+    { width >= 768?
       <div className='shoeGrid' >
+      
 <div>
 { 
    shoeClick === 1 && (
@@ -45,11 +66,20 @@ const ShoeGrid = () => {
    <img src={thumbShoe4} alt='' className={shoeClick===4?'thumbnailImgFocus':'thumbnailImg'} onClick={()=>setShoeClick(4)}/>
 </div>
       </div>
-      <div><AddCart/>
+      :
+      <ImageSlider/>
+       }
+      <div>
+
+      <AddCart/>
       
       </div>
+
+     
      {bigImgClick?<LightBoxGallery closeGallery={()=>setBigImgClick(false)}/>:null} 
     </main>
+
+    </>
   )
 }
 

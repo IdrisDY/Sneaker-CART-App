@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import addIcon from './images/icon-plus.svg'
 import subIcon from './images/icon-minus.svg'
 import cartIcon from './images/icon-cart.svg'
+import ImageSlider from './imageswipe/imageSlider'
+import images from './imageswipe/images'
 
 const AddCart = () => {
    const [cartItems, setCartItems] = useState(0)
@@ -13,6 +15,7 @@ const AddCart = () => {
   durable rubber outer sole, they’ll withstand everything the weather can offer.
 </p>
 <div>
+
 <div className='priceSlash'>
    <h2> $125.00</h2>
    <span> 50%</span>

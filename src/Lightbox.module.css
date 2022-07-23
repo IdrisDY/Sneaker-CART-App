@@ -5,17 +5,12 @@
    left: 0;
    right: 0;
    bottom: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
    background:  hsl(0, 0%, 0%,.75);
-   padding-top: 20px;
+   padding-top: 50px;
 }
 .boxContent{
-width: 40% ;
-display: flex;
-flex-direction: column;
-gap: 1em;
+width: 30% ;
+margin: 0 auto;
 }
 .bigbox{
    display: grid;
@@ -23,9 +18,9 @@ gap: 1em;
 }
 .close{
    position: relative;
-   right: -10%;
+   padding-bottom: 1em;
    display: flex;
-   justify-self: flex-end;
+   margin-left: auto;
 filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(336deg) brightness(109%) contrast(502%)   
 } 
 .shoegalImg{

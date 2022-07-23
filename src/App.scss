@@ -14,7 +14,7 @@ img,button{
 }
 .navSection{
    display: grid;
-   grid-template-columns: 1fr 2fr 1fr;
+   grid-template-columns: .75fr 2fr 1fr;
 padding: 1.5em 1em;
 border-bottom: 1px solid black;
 gap: 3em;
@@ -27,11 +27,12 @@ width: 70%;
    margin: 0;
    padding: 0;
    align-self: flex-start; 
+   gap: 2em;
 }
 .avatarDiv{
    display: flex;
    justify-content: flex-end;
-   gap: 3em;
+   gap: 1.5em;
 }
 .avatarDiv img{
    width: 40px;
@@ -44,23 +45,22 @@ gap: 3em;
 }
 main{
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: .75fr 1fr;
 width: 70%;
-gap: 3em;
+gap: 5em;
 .shoeGrid{
    display: flex;
    flex-direction: column;
    gap: 1em;
 }
    .shoeImg{
-      width: 90%;
+      width: 100%;
       border-radius: 1em;
       height: 60vh;
    }
    .thumbnailDiv{
       display: flex;
       justify-content: space-between;
-      width: 90%;
    }
    .thumbnailImg{
       width: 18%;
@@ -122,3 +122,88 @@ border-radius: .5em;
    .carticonWhite{
       filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(336deg) brightness(109%) contrast(502%)   } 
 } 
+.menubtn{
+   display: none;
+}
+@media(max-width :800px){
+   .container{
+gap: 0;
+   }
+   main{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1em;
+   }
+   .ulNav{
+      display: none;
+   }
+   .menubtn{
+      display: inline-block;
+   }
+   .menulogo{
+      display: flex;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1em;
+      .sneakerlogo{
+width: 90px;
+      }
+   }
+   .dropdown{
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: hsl(0, 0%, 0%,.75);
+      width: 100%;
+      transition: all  linear 3s;
+      ul{
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         gap: 2em;
+         padding-top: 2em;
+      }
+      .drop-content{
+         width: 50%;
+         position: fixed;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+   background: white;
+   padding: 1em 2em;
+
+      }
+   }
+   .navSection{
+      display: flex;
+      width: 100%;
+      gap: 0;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      justify-content: space-between;
+   }
+   .cartContainer{
+padding: 0 1em 3em 1em ;
+   }
+   .addToCart{
+      flex-direction: column;
+      .cartBtn{
+         width: 100%;
+      }
+      .cartCounter{
+         width: 100%;
+padding: .5em 0;     
+gap: 0;
+justify-items: center;
+ }
+   }
+.avatarDiv img{
+width: 30px;
+}
+
+}
