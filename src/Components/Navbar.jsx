@@ -4,7 +4,7 @@ import cartIcon from './images/icon-cart.svg'
 import avatar from './images/image-avatar.png'
 import Menu from './images/icon-menu.svg'
 import Dropdown from './Dropdown'
-
+import Cart from './Cart'
 export const NavList = () => {
 return(
   <ul className=''>
@@ -17,8 +17,15 @@ return(
 
 )
 }
-const Navbar = () => {
+const Navbar = ({CartNo}) => {
+ const [addToCart, setAddtoCart]= useState(0)
   const [menuClick, setMenuClick] = useState(false)
+  const [cartClicked, setCartClicked] = useState(false)
+
+function showCart(){
+ !cartClicked? setCartClicked(true):setCartClicked(false)
+}
+
   return (
     <nav className='navSection'>
     {menuClick?<Dropdown closeMenu={()=>setMenuClick(false)}/>:null}
@@ -37,8 +44,12 @@ const Navbar = () => {
   </ul>
 
       <div className='avatarDiv'>
-      <img src={cartIcon} alt='cart icon' className='navIcon'/>
-      <img src={avatar} alt='user avatar' className='navIcon'/>
+        <div  className='navIcon cartIcon' data-content={CartNo}>
+          <img src={cartIcon} onClick={showCart} alt='cart icon' /> 
+          {cartClicked?<Cart/>:null}
+</div>
+        <div  className='navIcon'>      <img src={avatar} alt='user avatar'/>
+</div>
       </div>
 
     </nav>

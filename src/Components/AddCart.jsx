@@ -5,7 +5,7 @@ import cartIcon from './images/icon-cart.svg'
 import ImageSlider from './imageswipe/imageSlider'
 import images from './imageswipe/images'
 
-const AddCart = () => {
+const AddCart = ({cartAdd}) => {
    const [cartItems, setCartItems] = useState(0)
   return (
     <div className='cartContainer'>
@@ -14,7 +14,7 @@ const AddCart = () => {
       <p>   These low-profile sneakers are your perfect casual wear companion. Featuring a 
   durable rubber outer sole, they’ll withstand everything the weather can offer.
 </p>
-<div>
+<div className='prices'>
 
 <div className='priceSlash'>
    <h2> $125.00</h2>
@@ -29,7 +29,7 @@ const AddCart = () => {
 <img src={subIcon} alt='number remove to cart ' onClick={()=> {if(cartItems>0){setCartItems(cartItems - 1)}}}/>
 
  </div>
-<button className='cartBtn'><img src={cartIcon} alt=' cart-icon ' className='carticonWhite' />
+<button className='cartBtn' onClick={cartAdd}><img src={cartIcon} alt=' cart-icon ' className='carticonWhite' />
 Add to cart</button>
 </div>
     </div>

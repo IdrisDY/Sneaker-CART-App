@@ -13,7 +13,7 @@ import ImageSlider from './imageswipe/imageSlider'
 import images from './imageswipe/images'
 import { useEffect } from "react"
 
-const ShoeGrid = () => {
+const ShoeGrid = ({addToCart}) => {
    const [shoeClick, setShoeClick] = useState(1)
    const [bigImgClick, setBigImgClick] = useState(false)
   
@@ -71,7 +71,7 @@ const ShoeGrid = () => {
        }
       <div>
 
-      <AddCart/>
+    {addToCart}
       
       </div>
 
