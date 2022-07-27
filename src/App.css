@@ -5,10 +5,13 @@
 
 body {
   font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif !important;
 }
 
 img, button {
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 li {
@@ -165,7 +168,7 @@ main .thumbnailImgFocus {
 
 .subcart {
   display: flex;
-  gap: 2em;
+  gap: 1em;
 }
 .subcart img {
   border-radius: 0.5em;
@@ -195,22 +198,46 @@ main .thumbnailImgFocus {
   flex-direction: column;
   width: 80%;
   align-self: center;
-  gap: 2em;
+  gap: 1em;
   padding-bottom: 1em;
+  border-bottom: 1px rgba(32, 31, 31, 0.2) solid;
 }
 .cart-row2 span {
   padding: 0;
   border-bottom: none;
+  font-size: 0.85rem;
 }
-.cart-row2 button {
+.cart-row2 .checkBtn {
   width: 100%;
   padding: 0.8em 0;
+  background: hsl(26deg, 100%, 55%);
+  border-radius: 0.5em;
+  color: white;
 }
 
 .cart-item-info {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
+}
+
+.no-order-p {
+  padding: 1em;
+}
+
+.delDiv {
+  display: flex;
+}
+.delDiv button {
+  height: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.delDiv button img {
+  height: 30px;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media (max-width: 800px) {

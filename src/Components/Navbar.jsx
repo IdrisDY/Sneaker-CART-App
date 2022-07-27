@@ -17,8 +17,7 @@ return(
 
 )
 }
-const Navbar = ({CartNo}) => {
- const [addToCart, setAddtoCart]= useState(0)
+const Navbar = ({CartNo, cart}) => {
   const [menuClick, setMenuClick] = useState(false)
   const [cartClicked, setCartClicked] = useState(false)
 
@@ -46,7 +45,7 @@ function showCart(){
       <div className='avatarDiv'>
         <div  className='navIcon cartIcon' data-content={CartNo}>
           <img src={cartIcon} onClick={showCart} alt='cart icon' /> 
-          {cartClicked?<Cart/>:null}
+          {cartClicked?cart:null}
 </div>
         <div  className='navIcon'>      <img src={avatar} alt='user avatar'/>
 </div>

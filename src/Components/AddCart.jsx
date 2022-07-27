@@ -4,9 +4,19 @@ import subIcon from './images/icon-minus.svg'
 import cartIcon from './images/icon-cart.svg'
 import ImageSlider from './imageswipe/imageSlider'
 import images from './imageswipe/images'
+import Cart from './Cart'
 
 const AddCart = ({cartAdd}) => {
    const [cartItems, setCartItems] = useState(0)
+   const isBtnDisabled = cartItems === 0
+   function handleAddClick(){
+    cartAdd(cartItems)
+    console.log(cartAdd)
+   }
+   const cartOrder = {
+cartItems
+   }
+   console.log(isBtnDisabled)
   return (
     <div className='cartContainer'>
       <span className='sneakertext'> SNEAKER COMPANY </span>
@@ -29,7 +39,7 @@ const AddCart = ({cartAdd}) => {
 <img src={subIcon} alt='number remove to cart ' onClick={()=> {if(cartItems>0){setCartItems(cartItems - 1)}}}/>
 
  </div>
-<button className='cartBtn' onClick={cartAdd}><img src={cartIcon} alt=' cart-icon ' className='carticonWhite' />
+<button disabled={isBtnDisabled} className='cartBtn' onClick={handleAddClick}><img src={cartIcon} alt=' cart-icon ' className='carticonWhite' />
 Add to cart</button>
 </div>
     </div>

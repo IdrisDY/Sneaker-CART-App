@@ -8,9 +8,12 @@ $Lightgrayishblue: hsl(223, 64%, 98%);
 }
 body{
    font-size: 16px;
+   font-family: 'Kumbh Sans', sans-serif !important;
 }
 img,button{
    cursor: pointer;
+   background: none;
+   border: none;
 }
 li{
    cursor: pointer;
@@ -149,7 +152,7 @@ padding: .15em .31em;
 }
 .subcart{
    display: flex;
-   gap: 2em;
+   gap: 1em;
    img{
       border-radius: .5em;
    }
@@ -177,24 +180,44 @@ border-bottom: .01em solid rgba(23, 23, 23, 0.3);
    flex-direction: column;
    width: 80%;
    align-self: center;
-   gap: 2em;
-   padding-bottom: 1em;
+   gap: 1em;
+   padding-bottom: 1em ;
+   border-bottom: 1px rgba(32, 31, 31, 0.2) solid;
    span{
       padding:0;
           border-bottom: none;
+          font-size: .85rem;
         }
      
 
-   button{
+   .checkBtn{
       width: 100%;
       padding: .8em 0;
+      background: $Orange;
+      border-radius: .5em;
+      color: white;
    }
 }
 .cart-item-info{
    display: flex;
    flex-direction: column;
-   gap: 1em;
+   gap: .5em;
+}
 
+.no-order-p{
+   padding: 1em;
+}
+.delDiv{
+   display: flex;
+   button{
+      height: 40px;
+      width: fit-content;
+
+      img{
+                  height: 30px;
+                  object-position: center;
+      }
+   }
 }
 
 @media(max-width :800px){
