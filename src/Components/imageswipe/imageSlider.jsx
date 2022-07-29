@@ -4,9 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./style.css"
 import images from "./images";
 import React from 'react'
-  import shoe1 from '../images/image-product-1.jpg'
 const ImageSlider = () => {
-  
   const settings = {
     infinite: true,
     dots: true,
@@ -14,8 +12,9 @@ const ImageSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: false,
-    autoplay: false,
+    autoplay: true,
   autoplaySpeed: 2000,
+  // Extend function from ImageSlider for customPagination which is the thumbnail image
    customPaging : (i)=>{
     return(
       <div>

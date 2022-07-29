@@ -1,23 +1,10 @@
 import React from 'react'
 import image1 from './images/image-product-1-thumbnail.jpg'
 import del from './images/icon-delete.svg'
-import { useState } from 'react'
-
 
 const Cart = ({cartArr,orderDelete}) => {
-  // const [orderArr, setOrderArr] = useState(cartArr)
-
-//   const orderDelete=(id)=>{
-// //     const filteredOrders = orderArr.filter(ar=> ar.id !== id)
-// // setOrderArr(filteredOrders)
-// // console.log(orderArr)
-// // console.log(id)
-// // if (orderArr.length === 0){
-// // setOrderArr([])
-// // }
-//   } 
-
-
+  // cartArr that is propped here is an array of CartOrders created and populated in App.js
+  // OrderDelete handles delete and displays filterd cartOrder Array 
   return (
     <div className='check-container'>
   <span>
@@ -31,7 +18,6 @@ No Orders At the Moment
   :
   cartArr.map(cart=> {
 
- 
 return(
   <div className='cart-row2' key={cart.id} >
   <div className='subcart'>
@@ -53,8 +39,6 @@ return(
 
 </div>
   </div>
-
-
   </div>
   <button className='checkBtn'>
   Checkout

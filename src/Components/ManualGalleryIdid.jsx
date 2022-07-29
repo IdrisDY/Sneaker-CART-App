@@ -1,9 +1,11 @@
 import React from 'react'
-
+/*Manual gallery 
+Using State i made the images change with state with the thumbnail clicked 
+Not efficient code and cannot scroll */
 const ManualGalleryIdid = () => {
   return (
     <div>
-          {/* <div className={styles.boxContent}>
+          <div className={styles.boxContent}>
     <div className={styles.bigbox}>
     <img src={exitIcon} alt='close gallery' className={styles.close} onClick={props.closeGallery}/>
 <div>
@@ -53,7 +55,7 @@ const ManualGalleryIdid = () => {
    <img src={thumbShoe4} alt='' className={shoeClick===4?'thumbnailImgFocus':'thumbnailImg'} onClick={()=>setShoeClick(4)}/>
 </div>
 
-    </div> */}
+    </div>
 
     </div>
   )

@@ -18,15 +18,18 @@ img,button{
 li{
    cursor: pointer;
 }
-li:hover{
-   border-bottom: 1px solid black;
-   transition: ease-in-out linear 3s;
+.ulNav li:hover, .drop li:hover{
+   border-bottom: 5px solid $Orange;
+   transition: transform 3s ease;
+   transition-delay: 2s;
+   transition-duration: 2s;
+
 }
 .navSection{
    display: grid;
    grid-template-columns: .75fr 2fr 1fr;
-padding: 1.5em 1em;
-border-bottom: 1px solid black;
+padding: 1.5em 1em 1em 1em;
+border-bottom: 1px solid rgb(32, 29, 29,.3);
 gap: 3em;
 width: 70%;
 position: relative;
@@ -37,8 +40,11 @@ position: relative;
    justify-content: space-evenly;
    margin: 0;
    padding: 0;
-   align-self: flex-start; 
    gap: 2em;
+   li{
+position: relative;
+height: auto;
+   }
 }
 .avatarDiv{
    display: flex;
@@ -47,6 +53,13 @@ position: relative;
 }
 .avatarDiv img{
    width: 40px;
+}
+.navIcon{
+height: fit-content;   }
+   
+.navIcon:hover{
+border: 2px solid $Orange;
+border-radius: 50%;
 }
 .container{
 display: flex;
@@ -91,7 +104,10 @@ gap: 1.5em;
    color: $Orange;
 }
 h1{
-   font-size: 2.5rem;
+   font-size: 3rem;
+}
+p{
+   line-height: 1.5em;
 }
 .priceSlash{
    display: flex;
@@ -133,6 +149,9 @@ border-radius: .5em;
    .carticonWhite{
       filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(336deg) brightness(109%) contrast(502%)   } 
 } 
+.cartBtn:hover{
+opacity: .75;
+}
 .menubtn{
    display: none;
 }
@@ -280,11 +299,15 @@ width: 90px;
       display: flex;
       width: auto;
       gap: 1em;
+      padding-bottom: 1em;
       justify-content: space-between;
   border-bottom: 0;
    }
    .cartContainer{
 padding: 0 1em 3em 1em ;
+h1{
+   font-size: 2.5rem;
+}
    }
    .addToCart{
       flex-direction: column;

@@ -2,21 +2,20 @@ import React, { useState } from 'react'
 import addIcon from './images/icon-plus.svg'
 import subIcon from './images/icon-minus.svg'
 import cartIcon from './images/icon-cart.svg'
-import ImageSlider from './imageswipe/imageSlider'
-import images from './imageswipe/images'
-import Cart from './Cart'
 
 const AddCart = ({cartAdd}) => {
    const [cartItems, setCartItems] = useState(0)
    const isBtnDisabled = cartItems === 0
+/**
+ * When the user clicks the add button, the cartAdd function is called and the cartItems array is
+ * passed to it.
+ * cartAdd function is prop here and collects the cartAdd parameter and was used in another component.
+ *Yet to understand fully, Prop functions also carry prop parameters?
+ */
    function handleAddClick(){
     cartAdd(cartItems)
     console.log(cartAdd)
    }
-   const cartOrder = {
-cartItems
-   }
-   console.log(isBtnDisabled)
   return (
     <div className='cartContainer'>
       <span className='sneakertext'> SNEAKER COMPANY </span>

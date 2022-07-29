@@ -7,10 +7,8 @@ import thumbShoe1 from './images/image-product-1-thumbnail.jpg'
 import thumbShoe2 from './images/image-product-2-thumbnail.jpg'
 import thumbShoe3 from './images/image-product-3-thumbnail.jpg'
 import thumbShoe4 from './images/image-product-4-thumbnail.jpg'
-import AddCart from './AddCart'
 import LightBoxGallery from './LightBoxGallery'
 import ImageSlider from './imageswipe/imageSlider'
-import images from './imageswipe/images'
 import { useEffect } from "react"
 
 const ShoeGrid = ({addToCart}) => {
@@ -23,8 +21,9 @@ const ShoeGrid = ({addToCart}) => {
       const checkWidth=()=>{
          setWidth(window.innerWidth)
       }
+/* A hook that is used to detect the window size. 
+I used it to act as a media query to show the imgslider on mobile C*/
       useEffect(()=>{
-         console.log("i dey see u ,y bro")
          window.addEventListener("resize",checkWidth)
       },[])
    

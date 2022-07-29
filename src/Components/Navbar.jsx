@@ -4,10 +4,10 @@ import cartIcon from './images/icon-cart.svg'
 import avatar from './images/image-avatar.png'
 import Menu from './images/icon-menu.svg'
 import Dropdown from './Dropdown'
-import Cart from './Cart'
 export const NavList = () => {
 return(
-  <ul className=''>
+  //mobile dropdown list 
+  <ul className='drop'>
   <li> Collections</li>
   <li>Men </li>
   <li>Women </li>
@@ -35,7 +35,7 @@ function showCart(){
     </div>
    
   <ul className='ulNav'>
-    <li> Collections</li>
+    <li > Collections</li>
     <li>Men </li>
     <li>Women </li>
     <li>About </li>
@@ -43,11 +43,11 @@ function showCart(){
   </ul>
 
       <div className='avatarDiv'>
-        <div  className='navIcon cartIcon' data-content={CartNo}>
+        <div  className='cartIcon' data-content={CartNo}>
           <img src={cartIcon} onClick={showCart} alt='cart icon' /> 
           {cartClicked?cart:null}
 </div>
-        <div  className='navIcon'>      <img src={avatar} alt='user avatar'/>
+        <div  className='navIcon'><img src={avatar} alt='user avatar'/>
 </div>
       </div>
 

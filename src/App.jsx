@@ -7,10 +7,12 @@ import AddCart from './Components/AddCart'
 import ImageSlider from './Components/imageswipe/imageSlider'
 import Cart from './Components/Cart'
 function App() {
-  const arrOfOrders = []
 const [cartNo, setCartNo] = useState(0)
-const [arr, setArr]= useState([])
+const [orderArr, setOrderArr]= useState([])
 
+/**
+ * The function takes in a number, and adds it to an array
+ */
   function handleCartOrderNo(cartItems){
     const obj = {
       id:Math.random(),
@@ -18,22 +20,27 @@ const [arr, setArr]= useState([])
       }
     
   setCartNo(cartNo+1)
- arr.push(obj)
-console.log(arr)
+ orderArr.push(obj)
+console.log(orderArr)
   }
+
+/**
+ * The function takes in an id, filters the array of orders, and sets the filtered array as the new
+ * array of orders
+ */
   function handleOrderDelete(id){
-    const filteredOrders = arr.filter(ar=> ar.id !== id)
-setArr(filteredOrders)
-console.log(arr)
+    const filteredOrders = orderArr.filter(ar=> ar.id !== id)
+setOrderArr(filteredOrders)
+setCartNo( cartNo-1)
   }
 
   
   return (
     <div className="App">
     <div className='container'>
-    <Navbar CartNo={cartNo} cart={<Cart cartArr={arr} orderDelete={handleOrderDelete} />}/>
-{/* Passing a prop to the ShoeGrid component. */}
-    <ShoeGrid addToCart={   <AddCart cartAdd = {handleCartOrderNo}     />} />
+    <Navbar CartNo={cartNo} cart={<Cart cartArr={orderArr} orderDelete={handleOrderDelete} />}/>
+{/* Passing a prop to the ShoeGrid component ah. */}
+    <ShoeGrid addToCart={<AddCart cartAdd={handleCartOrderNo}/>}/>
 
     </div>
     </div>

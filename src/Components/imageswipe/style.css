@@ -1,10 +1,6 @@
-body {
-}
- 
 .tag {
    text-align: center;
 }
- 
 .slick-slide img {
    margin: auto;
    width: 100%;
@@ -38,7 +34,6 @@ body {
 
 }
 .slick-prev{
-     
    color: black;
    cursor: pointer;
    width: 40px;
@@ -46,6 +41,7 @@ body {
 z-index: 9999;}
 .imgDiv{
    border-radius: 1em;
+   border: none;
 }
 @media(max-width:800px){
 
